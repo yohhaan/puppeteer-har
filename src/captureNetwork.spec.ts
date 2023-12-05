@@ -8,7 +8,7 @@ describe("captureNetwork", () => {
     if (browser == null) {
       browser = await puppeteer.launch({
         executablePath: '/usr/bin/google-chrome-stable',
-        headless: true
+        headless: "new"
       }
       )
     }

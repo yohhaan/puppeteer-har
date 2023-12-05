@@ -17,12 +17,13 @@ export const observeEvents = (
   const results: ObserverResult[] = []
 
   const observers = events.map((method) => {
-    const callback = async (params: Params) => results.push({ method, params })
+    const callback = async (params: any) => results.push({ method, params })
 
     client.on(method, callback)
 
     return () => client.off(method, callback)
   })
+
 
   const dispose = () => observers.forEach((stopObserving) => stopObserving())
 

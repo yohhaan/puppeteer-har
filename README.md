@@ -8,11 +8,9 @@ This repository is a fork of another fork of the initial puppeteer-har package.
 Main changes:
 - Remove npm package release configurations (`husky`, `pinst`, `semantic-release`,
   etc.) to install library from GitHub link
-- ``.devcontainer/`` configurations for [development with
+- `.devcontainer/` configurations for [development with
   VScode](https://gist.github.com/yohhaan/b492e165b77a84d9f8299038d21ae2c9)
-
-TODO:
-- Upgrade dependencies later and fix type issues
+- Dependencies upgraded and fix type issues
 
 ## Install
 
