@@ -1,28 +1,26 @@
 {
-  "name": "@auteon/puppeteer-har",
-  "version": "0.0.0-development",
+  "name": "puppeteer-har-fork",
+  "version": "1.0.0",
   "description": "Generate HAR file with Puppeteer",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "clean": "rimraf lib",
     "prebuild": "yarn clean",
     "build": "tsc --build",
-    "prepublishOnly": "yarn build && pinst --disable",
-    "postinstall": "husky install",
-    "postpublish": "pinst --enable",
-    "release": "semantic-release",
+    "prepublishOnly": "yarn build",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/auteon/puppeteer-har"
+    "url": "https://github.com/yohhaan/puppeteer-har"
   },
   "keywords": [
     "har",
     "puppeteer",
     "performance"
   ],
-  "author": "auteon GmbH",
+  "author": "yohhaan | auteon GmbH | Michał Janaszek",
   "license": "MIT",
   "dependencies": {
     "chrome-har": "^0.11.3"
@@ -34,39 +32,14 @@
     "node": ">=7.6.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "12.1.4",
-    "@commitlint/config-conventional": "12.1.4",
     "@types/har-format": "1.2.5",
     "@types/jest": "26.0.23",
     "@types/node": "14.14.45",
-    "husky": "6.0.0",
     "jest": "26.6.3",
-    "pinst": "2.1.6",
     "puppeteer": "9.1.1",
     "rimraf": "3.0.2",
-    "semantic-release": "17.4.3",
     "ts-jest": "26.5.6",
     "ts-node": "9.1.1",
     "typescript": "4.2.4"
-  },
-  "release": {
-    "branch": "main",
-    "branches": [
-      "main"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
   }
 }
