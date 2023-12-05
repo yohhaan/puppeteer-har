@@ -11,6 +11,8 @@ Main changes:
 - ``.devcontainer/`` configurations for [development with
   VScode](https://gist.github.com/yohhaan/b492e165b77a84d9f8299038d21ae2c9)
 
+TODO:
+- Upgrade dependencies later and fix type issues
 
 ## Install
 
